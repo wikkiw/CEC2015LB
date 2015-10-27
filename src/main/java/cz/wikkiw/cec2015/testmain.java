@@ -1,6 +1,7 @@
 package cz.wikkiw.cec2015;
 
 import java.io.*;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class testmain {
@@ -26,6 +27,7 @@ public class testmain {
 			func_num = i+1;
 			fpt = new File("input_data/shift_data_"+func_num+".txt");
 			Scanner input = new Scanner(fpt);
+                        input.useLocale(Locale.US);
 			
 			for(k=0;k<n;k++)
 			{
@@ -49,12 +51,12 @@ public class testmain {
 			
 
 			
-			for (k=0;k<1;k++)
+			for (k=0;k<90000;k++)
 			{
 				tf.test_func(x,f,n,m,func_num);
 				for(j=0;j<m;j++)
 				{
-					System.out.println("f"+func_num+"(x["+(j+1)+"])="+f[j]);
+//					System.out.println("f"+func_num+"(x["+(j+1)+"])="+f[j]);
 				}
 			}
 			

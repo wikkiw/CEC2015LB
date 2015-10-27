@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Locale;
 
 public class testfunc {
 	final double INF = 1.0e99;
@@ -104,6 +105,7 @@ public class testfunc {
 			/*Load Matrix M*****************************************************/
 			File fpt = new File("input_data/M_"+func_num+"_D"+nx+".txt");//* Load M data *
 			Scanner input = new Scanner(fpt);
+                        input.useLocale(Locale.US);
 			if (!fpt.exists())
 			{
 			    System.out.println("\n Error: Cannot open input file for reading ");
@@ -165,6 +167,7 @@ public class testfunc {
 				
 				fpt = new File("input_data/bias_"+func_num+".txt");//* Load bias data *
 				input = new Scanner(fpt);
+                                input.useLocale(Locale.US);
 				if (!fpt.exists())
 				{
 				    System.out.println("\n Error: Cannot open input file for reading ");
@@ -186,6 +189,7 @@ public class testfunc {
 			
 			fpt=new File("input_data/shift_data_"+func_num+".txt");
 			input = new Scanner(fpt);
+                        input.useLocale(Locale.US);
 			if (!fpt.exists())
 			{
 				System.out.println("\n Error: Cannot open input file for reading ");
@@ -302,6 +306,7 @@ public class testfunc {
 			if(bShuffle[func_num]==1){
 				fpt = new File("input_data/shuffle_data_"+func_num+"_D"+nx+".txt");
 				input = new Scanner(fpt);
+                                input.useLocale(Locale.US);
 				if (!fpt.exists())
 				{
 				    System.out.println("\n Error: Cannot open input file for reading ");
