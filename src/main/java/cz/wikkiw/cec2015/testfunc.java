@@ -28,52 +28,10 @@ public class testfunc {
 	double[] OShift,M,y,z,x_bound,bias;
 	int ini_flag,n_flag,func_flag;
 	int[] SS;
-	
 
-	//double sphere_func (double[] , double , int , double[] ,double[] ,int ,int) /* Sphere */
-	//double ellips_func (double[] , double , int , double[] ,double[] ,int ,int) /* Ellipsoidal */
-	//double bent_cigar_func (double[] , double , int , double[] ,double[] ,int ,int) /* Bent_Cigar */
-	//double discus_func_func (double[] , double , int , double[] ,double[] ,int ,int) /* Discus */
-	//double dif_powers_func (double[] , double , int , double[] ,double[] ,int ,int) /* Different Powers  */
-	//double rosenbrock_func (double[] , double , int , double[] ,double[] ,int ,int) /* Rosenbrock's  */
-	//double schaffer_F7_func (double[] , double , int , double[] ,double[] ,int ,int) /* Schwefel's F7  */
-	//double ackley_func (double[] , double , int , double[] ,double[] ,int ,int) /* Ackley's  */
-	//double rastrigin_func (double[] , double , int , double[] ,double[] ,int ,int) /* Rastrigin's  */
-	//double weierstrass_func (double[] , double , int , double[] ,double[] ,int ,int) /* Weierstrass's  */
-	//double griewank_func (double[] , double , int , double[] ,double[] ,int ,int) /* Griewank's  */
-	//double schwefel_func (double[] , double , int , double[] ,double[] ,int ,int) /* Schwefel's */
-	//double katsuura_func (double[] , double , int , double[] ,double[] ,int ,int) /* Katsuura */
-	//double bi_rastrigin_func (double[] , double , int , double[] ,double[] ,int ,int) /* Lunacek Bi_rastrigin  */
-	//double grie_rosen_func (double[] , double , int , double[] ,double[] ,int ,int) /* Griewank-Rosenbrock  */
-	//double escaffer6_func (double[] , double , int , double[] ,double[] ,int ,int) /* Expanded Scaffer°Įs F6  */
-	//double step_rastrigin_func (double[] , double , int , double[] ,double[] ,int ,int) /* Noncontinuous Rastrigin's  */
-	//double happycat_func (double[] , double , int , double[] ,double[] ,int ,int) /* HappyCat  */
-	//double hgbat_func (double[] , double , int , double[] ,double[] ,int ,int) /* HGBat  */
-	
-	
-	//double hf01 (double[] , double[] , int , double[] ,double[] , int[] ,int ,int) /* Composition Function 1 */
-	//double hf02 (double[] , double[] , int , double[] ,double[] , int[] ,int ,int) /* Composition Function 2 */
-	//double hf03 (double[] , double[] , int , double[] ,double[] , int[] ,int ,int) /* Composition Function 3 */
-	
-		
-	//double cf01 (double[] , double[] , int , double[] ,double[] , double[] ,int ) /* Composition Function 1 */
-	//double cf02 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 2 */
-	//double cf03 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 3 */
-	//double cf04 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 4 */
-	//double cf05 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 5 */
-	//double cf06 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 6 */
-	//double cf07 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 7 */
-
-	
-	//void shiftfunc (double[] , double[] , int ,double[] )
-	//void rotatefunc (double[] , double[] , int ,double[] )
-	//void sr_func (double[] .double[] ,int ,double[] ,double[] ,double ,int ,int )/* shift and rotate*/
-	//double cf_cal(double[] , double , int , double[] ,double[] ,double[] ,double[] , int )
-	
-	
-	public void test_func(double[] x, double[] f, int nx, int mx,int func_num)throws Exception{
-		//int cf_num=10,i,j;
-		int cf_num,i,j;
+    public void readBasics(int nx, int mx,int func_num) throws Exception{
+        
+        int cf_num,i,j;
 		cf_num=cf_nums[func_num];
 		
 		if (ini_flag==1) 
@@ -320,6 +278,301 @@ public class testfunc {
 				}	
 				input.close();
 			}
+                }
+        
+    }
+	
+
+	//double sphere_func (double[] , double , int , double[] ,double[] ,int ,int) /* Sphere */
+	//double ellips_func (double[] , double , int , double[] ,double[] ,int ,int) /* Ellipsoidal */
+	//double bent_cigar_func (double[] , double , int , double[] ,double[] ,int ,int) /* Bent_Cigar */
+	//double discus_func_func (double[] , double , int , double[] ,double[] ,int ,int) /* Discus */
+	//double dif_powers_func (double[] , double , int , double[] ,double[] ,int ,int) /* Different Powers  */
+	//double rosenbrock_func (double[] , double , int , double[] ,double[] ,int ,int) /* Rosenbrock's  */
+	//double schaffer_F7_func (double[] , double , int , double[] ,double[] ,int ,int) /* Schwefel's F7  */
+	//double ackley_func (double[] , double , int , double[] ,double[] ,int ,int) /* Ackley's  */
+	//double rastrigin_func (double[] , double , int , double[] ,double[] ,int ,int) /* Rastrigin's  */
+	//double weierstrass_func (double[] , double , int , double[] ,double[] ,int ,int) /* Weierstrass's  */
+	//double griewank_func (double[] , double , int , double[] ,double[] ,int ,int) /* Griewank's  */
+	//double schwefel_func (double[] , double , int , double[] ,double[] ,int ,int) /* Schwefel's */
+	//double katsuura_func (double[] , double , int , double[] ,double[] ,int ,int) /* Katsuura */
+	//double bi_rastrigin_func (double[] , double , int , double[] ,double[] ,int ,int) /* Lunacek Bi_rastrigin  */
+	//double grie_rosen_func (double[] , double , int , double[] ,double[] ,int ,int) /* Griewank-Rosenbrock  */
+	//double escaffer6_func (double[] , double , int , double[] ,double[] ,int ,int) /* Expanded Scaffer°Įs F6  */
+	//double step_rastrigin_func (double[] , double , int , double[] ,double[] ,int ,int) /* Noncontinuous Rastrigin's  */
+	//double happycat_func (double[] , double , int , double[] ,double[] ,int ,int) /* HappyCat  */
+	//double hgbat_func (double[] , double , int , double[] ,double[] ,int ,int) /* HGBat  */
+	
+	
+	//double hf01 (double[] , double[] , int , double[] ,double[] , int[] ,int ,int) /* Composition Function 1 */
+	//double hf02 (double[] , double[] , int , double[] ,double[] , int[] ,int ,int) /* Composition Function 2 */
+	//double hf03 (double[] , double[] , int , double[] ,double[] , int[] ,int ,int) /* Composition Function 3 */
+	
+		
+	//double cf01 (double[] , double[] , int , double[] ,double[] , double[] ,int ) /* Composition Function 1 */
+	//double cf02 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 2 */
+	//double cf03 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 3 */
+	//double cf04 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 4 */
+	//double cf05 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 5 */
+	//double cf06 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 6 */
+	//double cf07 (double[] , double[] , int , double[] ,double[] ,double[] ,int ) /* Composition Function 7 */
+
+	
+	//void shiftfunc (double[] , double[] , int ,double[] )
+	//void rotatefunc (double[] , double[] , int ,double[] )
+	//void sr_func (double[] .double[] ,int ,double[] ,double[] ,double ,int ,int )/* shift and rotate*/
+	//double cf_cal(double[] , double , int , double[] ,double[] ,double[] ,double[] , int )
+	
+	
+	public void test_func(double[] x, double[] f, int nx, int mx,int func_num)throws Exception{
+		//int cf_num=10,i,j;
+		int cf_num,i,j;
+		cf_num=cf_nums[func_num];
+		
+		if (ini_flag==1) 
+		{
+			if ((n_flag!=nx)||(func_flag!=func_num)) /* check if nx or func_num are changed, reinitialization*/
+			{
+				ini_flag=0;
+			}
+		}
+		if (ini_flag==0) /* initiailization*/
+		{
+			
+			y=new double[nx];
+			z=new double[nx];
+			x_bound=new double[nx]; 
+			for (i=0; i<nx; i++)
+				x_bound[i]=100.0;
+
+			if (!(nx==2||nx==10||nx==30||nx==50||nx==100))
+			{
+				System.out.println("\nError: Test functions are only defined for D=2,10,30,50,100, and nx is " + nx);
+			}
+			
+			if (nx==2&&((func_num>=6&&func_num<=8)||(func_num==10)||(func_num==13)))
+			{
+				System.out.println("\nError: hf01,hf02,hf03,cf02&cf05 are NOT defined for D=2.\n");
+			}
+
+			/*Load Matrix M*****************************************************/
+//			File fpt = new File("input_data/M_"+func_num+"_D"+nx+".txt");//* Load M data *
+//			Scanner input = new Scanner(fpt);
+//                        input.useLocale(Locale.US);
+//			if (!fpt.exists())
+//			{
+//			    System.out.println("\n Error: Cannot open input file for reading ");
+//			}
+//			
+//			M=new double[cf_num*nx*nx]; 
+//			
+//			
+//			for (i=0;i<cf_num*nx*nx; i++)
+//			{
+//				M[i]=input.nextDouble();
+//			}
+//			//System.out.println(cf_num*nx*nx-1);
+//			
+//			/*if (func_num<9)
+//			{
+//				M=new double[nx*nx]; 
+//			
+//				for (i=0;i<nx*nx; i++)
+//				{
+//					M[i]=input.nextDouble();
+//				}
+//			}
+//			else
+//			{
+//				M=new double[cf_num*nx*nx]; 
+//				
+//				for (i=0; i<cf_num*nx*nx; i++)
+//				{
+//						M[i]=input.nextDouble();
+//				}
+//				
+//			}*/
+//			
+//			input.close();
+			
+			
+			/*Load Bias_value bias*************************************************/
+			
+			/*if (func_num>=9){
+			
+			fpt = new File("input_data/bias_"+func_num+".txt");//* Load bias data *
+			input = new Scanner(fpt);
+			if (!fpt.exists())
+			{
+			    System.out.println("\n Error: Cannot open input file for reading ");
+			}
+			
+			bias=new double[cf_num];
+			
+			for (i=0;i<cf_num; i++)
+			{
+				bias[i]=input.nextDouble();
+			}
+			input.close();
+			}*/
+			
+//			if(cf_num>1){
+//				
+//				fpt = new File("input_data/bias_"+func_num+".txt");//* Load bias data *
+//				input = new Scanner(fpt);
+//                                input.useLocale(Locale.US);
+//				if (!fpt.exists())
+//				{
+//				    System.out.println("\n Error: Cannot open input file for reading ");
+//				}
+//				bias=new double[cf_num];
+//				for (i=0;i<cf_num; i++)
+//				{
+//					bias[i]=input.nextDouble();
+//				}
+//				input.close();
+//				
+//				
+//			}
+//			
+//			
+//			
+//			
+//			/*Load shift_data***************************************************/
+//			
+//			fpt=new File("input_data/shift_data_"+func_num+".txt");
+//			input = new Scanner(fpt);
+//                        input.useLocale(Locale.US);
+//			if (!fpt.exists())
+//			{
+//				System.out.println("\n Error: Cannot open input file for reading ");
+//			}
+//			
+//			OShift=new double[cf_num*nx];
+//			
+//			/*for(i=0;i<cf_num*nx;i++)
+//			{
+//				OShift[i]=input.nextDouble();
+//				//System.out.println(OShift[i]);
+//			}*/
+//			if(func_num<9)
+//			{
+//				for (i=0;i<nx*cf_nums[func_num];i++)
+//				{
+//					
+//					OShift[i]=input.nextDouble();
+//				}
+//			}
+//			else
+//			{
+//				for(i=0;i<cf_nums[func_num]-1;i++)
+//				{
+//					for(j=0;j<nx;j++)
+//					{
+//						OShift[i*nx+j]=input.nextDouble();
+//					}
+//					String sss=input.nextLine();
+//					
+//					//System.out.println(OShift[i*nx+j]);
+//				}
+//				for(j=0;j<nx;j++)
+//				{
+//					OShift[(cf_nums[func_num]-1)*nx+j]=input.nextDouble();
+//				}
+//				
+//			}
+//			
+//			/*for(i=0;i<cf_num*nx;i++)
+//			{
+//				//OShift[i]=input.nextDouble();
+//				System.out.println(OShift[i]);
+//			}*/
+//			
+//			
+//			input.close();
+			
+			
+			/*if (func_num<9)
+			{
+				fpt=new File("input_data/shift_data_"+func_num+".txt");
+				input = new Scanner(fpt);
+				if (!fpt.exists())
+				{
+					System.out.println("\n Error: Cannot open input file for reading ");
+				}
+				
+				OShift=new double[nx];
+				for(i=0;i<nx;i++)
+				{
+					OShift[i]=input.nextDouble();
+					if (OShift == null)
+					{
+						System.out.println("\nError: there is insufficient memory available!");
+					}
+				}
+				input.close();
+			}
+			else
+			{
+			
+				OShift=new double[nx*cf_num];
+				
+				fpt=new File("input_data/shift_data_"+func_num+".txt");								
+				FileReader reader = new FileReader(fpt);
+				BufferedReader br = new BufferedReader(reader);
+				String[] s = new String[100];
+								
+				for (i=0;i<cf_num;i++){
+					s[i] = br.readLine();
+					String[] array = s[i].split("\\s+");
+					double[] temp = new double[array.length-1];
+
+					for ( int k = 0; k < array.length-1; k++) {
+					    temp[k]= Double.parseDouble(array[k+1]);
+					    
+					}
+					
+					for (j=0;j<nx;j++){
+						
+						OShift[i*nx+j] = temp[j];
+						
+					}
+				
+				}
+				
+				br.close();
+				reader.close();
+				input.close();
+										
+				
+			}
+			
+			input.close();*/
+			
+			
+			
+			
+			
+			
+			/*Load Shuffle_data*******************************************/
+			
+//			if(bShuffle[func_num]==1){
+//				fpt = new File("input_data/shuffle_data_"+func_num+"_D"+nx+".txt");
+//				input = new Scanner(fpt);
+//                                input.useLocale(Locale.US);
+//				if (!fpt.exists())
+//				{
+//				    System.out.println("\n Error: Cannot open input file for reading ");
+//				}
+//				SS = new int[cf_num*nx];
+//				
+//				for(i=0;i<cf_num*nx;i++)
+//				{
+//					//fscanf(fpt,"%d",&SS[i]);
+//					SS[i] = input.nextInt();
+//				}	
+//				input.close();
+//			}
 			
 			
 						
